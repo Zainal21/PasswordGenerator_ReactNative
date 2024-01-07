@@ -2,16 +2,20 @@ const theme = {
   colors: {
     white: '#fff',
     lightGray: '#f2f2f2',
-    gray: '#a4a5a4',
+    gray: '#626262',
     orange: '#f3693e',
     green: '#50b784',
+    lightBlue: '#f1f4ff',
+    blue: '#1F41BB',
+    black: '#000',
   },
   size: {
-    xs: 4,
-    sm: 6,
-    md: 8,
-    lg: 12,
-    xl: 24,
+    xs: 10,
+    sm: 14,
+    md: 16,
+    lg: 20,
+    xl: 30,
+    xxl: 35,
   },
 };
 

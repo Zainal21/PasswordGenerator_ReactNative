@@ -1,11 +1,20 @@
-import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+/**
+ * Learn more about using TypeScript with React Navigation:
+ * https://reactnavigation.org/docs/typescript/
+ */
+
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
 
 export type RootStackParamList = {
+  Welcome: undefined;
   Home: undefined;
-  Place: {placeId: number};
 };
 
-export type HomeScreenProps = NativeStackScreenProps<
-  RootStackParamList,
-  'Home'
->;
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
+  NativeStackScreenProps<RootStackParamList, Screen>;
